@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/d8dp"
+        android:layout_marginEnd="@dimen/d8dp"
+        android:layout_marginStart="@dimen/d8dp"
+        android:layout_marginTop="@dimen/d8dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d5dp"
+            android:layout_marginBottom="@dimen/d5dp"
+            android:layout_marginEnd="@dimen/d5dp"
+            android:layout_marginStart="@dimen/d5dp">
+
+            <ImageView
+                android:id="@+id/ivFeed"
+                android:layout_width="@dimen/d100dp"
+                android:layout_height="@dimen/d100dp"
+                android:src="@drawable/ic_launcher_background" />
+
+            <TextView
+                android:id="@+id/tvFeedQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="@dimen/d8dp"
+                android:layout_toEndOf="@+id/ivFeed"
+                android:text="Question"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/s16sp" />
+
+            <TextView
+                android:id="@+id/tvFeedPubDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignStart="@+id/tvFeedQuestion"
+                android:layout_below="@id/tvFeedQuestion"
+                android:layout_marginTop="@dimen/d8dp"
+                android:gravity="left"
+                android:text="31/12/1997"
+                android:layout_marginBottom="@dimen/d8dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/s10sp" />
+
+            <TextView
+                android:id="@+id/tvFeedTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvFeedPubDate"
+                android:layout_alignStart="@+id/tvFeedPubDate"
+                android:paddingStart="@dimen/d5dp"
+                android:paddingEnd="@dimen/d5dp"
+                android:text="C++"
+                android:background="@drawable/rounded_background"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/tvFeedLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username"
+                android:layout_alignTop="@id/tvFeedTag"
+                android:layout_alignBaseline="@id/tvFeedTag"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/colorAccent" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</FrameLayout>

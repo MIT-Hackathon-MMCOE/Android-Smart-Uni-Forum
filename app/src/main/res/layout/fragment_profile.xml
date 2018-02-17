@@ -1,0 +1,142 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="hackathon.com.smartuniforum.UI.ProfileFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Toolbar
+            android:id="@+id/profileToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:paddingEnd="@dimen/activity_horizontal_margin"
+            android:titleTextColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/d8dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/ivToolbarProfile"
+                        android:layout_width="@dimen/d100dp"
+                        android:layout_height="@dimen/d100dp"
+                        android:src="@drawable/ic_launcher_background" />
+
+                    <TextView
+                        android:id="@+id/tvToolbarName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="@dimen/d10dp"
+                        android:layout_marginTop="@dimen/d8dp"
+                        android:layout_toEndOf="@id/ivToolbarProfile"
+                        android:text="Aditya Kulkarni"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/s16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvToolbarCollege"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvToolbarName"
+                        android:layout_marginStart="@dimen/d10dp"
+                        android:layout_marginTop="@dimen/d8dp"
+                        android:layout_toEndOf="@id/ivToolbarProfile"
+                        android:text="Computer,MMCOE"
+                        android:textColor="@color/white" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvToolbarCollege"
+                        android:layout_marginStart="@dimen/d8dp"
+                        android:layout_marginTop="@dimen/d8dp"
+                        android:layout_toEndOf="@id/ivToolbarProfile"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvToolbarFollowing"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/text_border_layoit"
+                            android:padding="@dimen/d5dp"
+                            android:text="Following | 10"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/tvToolbarFollowers"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/d8dp"
+                            android:background="@drawable/text_border_layoit"
+                            android:padding="@dimen/d5dp"
+                            android:text="Followers | 10"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btnToolbarEditProfile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ivToolbarProfile"
+                        android:layout_marginBottom="@dimen/d8dp"
+                        android:layout_marginTop="@dimen/d8dp"
+                        android:background="@drawable/button_border_drawable"
+                        android:text="Edit Profie"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+
+                <android.support.design.widget.AppBarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:elevation="0dp"
+                    android:theme="@style/AppTheme.AppBarOverlay">
+
+                    <android.support.design.widget.TabLayout
+                        android:id="@+id/tlToolbarTabs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.design.widget.TabItem
+                            android:id="@+id/tabItem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/posts"
+                            android:textAlignment="center" />
+
+                        <android.support.design.widget.TabItem
+                            android:id="@+id/tabItem2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/about"
+                            android:textAlignment="center" />
+                    </android.support.design.widget.TabLayout>
+
+                </android.support.design.widget.AppBarLayout>
+
+            </LinearLayout>
+        </Toolbar>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vpToolbarProfile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
